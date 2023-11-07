@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: rgb(var(--body-color));
+  background-color: #fff;
   margin: 0px;
 }
 
@@ -83,8 +83,8 @@ button, a, input {
 }
 
 #phone {
-  background-color: rgb(var(--theme-background));
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  background-color: #E54787;
+  box-shadow: rgb(17, 16, 16) 0px 8px 24px;
   height: 851px;
   width: 393px;  
   margin: 100px auto;
@@ -109,7 +109,7 @@ button, a, input {
   left: 0px;
   bottom: 0px;
   z-index: 3;
-  background-color: rgb(var(--theme-background));
+  background-color: #DCCDCD;
   padding: 0.5rem 1rem;
   border-top: 1px solid rgb(255 255 255 / 10%);
 }
@@ -118,6 +118,7 @@ button, a, input {
   padding: 0.5rem 1rem;  
   border-radius: 0.25rem;
   position: relative;
+  color: #000000;
 }
 
 #nav > button.active:after {
@@ -128,7 +129,8 @@ button, a, input {
   top: -0.5rem;
   left: 50%;
   translate: -50%;
-  background: var(--linear-gradient);
+  background: #E54787;
+  color: #E54787;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
@@ -156,8 +158,9 @@ button, a, input {
   width: 100%;
   display: flex;
   z-index: 1;
-  left: 0px;
-  top: 0px;
+  left: 3px;
+  top: 3px;
+  padding-right: 6px;
   position: relative;
 }
 
@@ -175,9 +178,69 @@ button, a, input {
   z-index: 3;
   padding: 0.5rem 1rem;
   overflow: auto;
-  background: linear-gradient(to bottom, rgb(34, 123, 66) 0%, rgb(10 10 10) 40%, transparent 40%);
+  /* background: linear-gradient(to bottom, rgb(34, 123, 66) 0%, rgb(10 10 10) 40%, transparent 40%); */
 }
 
+#user-box {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  margin-left: 4px;
+  margin-right: 4px; /* Sesuaikan dengan jarak yang diinginkan dari elemen sebelumnya */
+  font-size: 1rem;
+  margin-top: 20px; /* Tambahkan margin ke atas sesuai kebutuhan */
+}
+
+.box {
+  margin-top: 12px;
+  margin-left: 2px;
+  background-color: #f0f0f0; /* Warna latar belakang */
+  /* border: 1px solid #ccc; Tepi dengan garis tipis */
+  padding: 10px; /* Ruang di dalam kotak */
+  padding-right: 2px;
+  /* border-radius: 5px; Sudut membulatkan */
+  width: 393px; /* Lebar kotak */
+  height: 800px; /* Tinggi kotak */
+  justify-content: space-between;
+}
+
+.box-isi {
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #ABC9D6; /* Warna latar belakang */
+  border: 1px solid #ccc; /* Tepi dengan garis tipis */
+  padding: 10px; 
+  border-radius: 5px; /* Sudut membulatkan */
+  width: 368px; /* Lebar kotak */
+  height: 115px; /* Tinggi kotak */
+}
+
+.box-isi > p {
+  color: #000;
+}
+
+.box-kecil > p {
+  color: #000;
+  font-size: small;
+}
+
+.box-kecil{
+  margin-top: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #7EC0D5; /* Warna latar belakang */
+  border: 1px solid #ccc; /* Tepi dengan garis tipis */
+  padding: 10px; 
+  border-radius: 5px; /* Sudut membulatkan */
+  width: 180px; 
+  height: 133px; 
+
+}
+
+.box-kecil-image {
+  width: 50px;
+  position: relative;
+}
 .header-item-image {
   position: relative;  
 }
@@ -236,12 +299,7 @@ button, a, input {
   width: 100%;
   position: absolute;
   z-index: 1;
-  background: linear-gradient(
-    -15deg, 
-    transparent 30%, 
-    rgb(var(--gradient-color-1)), 
-    rgb(var(--gradient-color-2))
-  );
+  color: #fff;
   opacity: 0.15;
   filter: blur(3rem);
 }
@@ -253,11 +311,21 @@ button, a, input {
   margin: 0rem 1rem;
 }
 
-#search {
+/* #search {
   height: 3.5rem;
   position: relative;
   background: linear-gradient(to right, rgb(var(--gradient-color-1)), rgb(var(--gradient-color-2)));
   border-radius: 0.4rem;
+} */
+
+#search {
+  height: 2rem; /* Sesuaikan tinggi sesuai keinginan */
+  width: 300px; /* Sesuaikan lebar sesuai keinginan */
+  position: relative;
+  background: linear-gradient(to right, rgb(var(--gradient-color-1)));
+  border-radius: 0.2rem; /* Mengurangi sudut sudut */
+  left: 4; /* Memastikan elemen berada di kiri */
+  margin-top: 10px;
 }
 
 #search-input {
@@ -266,7 +334,7 @@ button, a, input {
   gap: 0.5rem;
   position: absolute;
   inset: 2px;
-  background-color: rgb(var(--theme-background) / 90%);
+  background-color: #fff;
   padding: 0.5rem;
   border-radius: 0.3rem;
   backdrop-filter: blur(0.75rem);
@@ -275,14 +343,14 @@ button, a, input {
 #search-input > i {
   width: 1.5rem;
   padding: 0rem 0.25rem;
-  color: rgb(255 255 255 / 85%); 
+  color: rgba(0, 0, 0, 0.85); 
   text-align: center;
 } 
 
 #search-input > input {
   width: 100%;
   flex-grow: 1; 
-  color: white;
+  color: rgb(0, 0, 0);
   background-color: transparent;
   border: none;
   outline: none;
@@ -299,16 +367,20 @@ button, a, input {
 }
 
 #search-input > button > i {
-  color: rgb(255 255 255 / 85%); 
+  color: rgba(0, 0, 0, 0.85); 
 }
 
 #search-input > button:is(:hover, :focus-visible) {
-  background: rgb(255 255 255 / 10%);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
 }
 
 #search-input > input::placeholder {
-  color: rgb(255 255 255 / 25%);
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.header i.fa-bell {
+  float: right;
 }
 
 #search-categories {
@@ -317,6 +389,7 @@ button, a, input {
   margin-bottom: 0.25rem;
   overflow: auto;
 }
+
 
 #search-categories > button {
   flex-shrink: 0;
