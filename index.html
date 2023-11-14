@@ -1,128 +1,277 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Gacoan Delivery</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gacoan Delivery</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/7pK1Mty/image-5.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <style>
 
-</head>
-<body>
-<div id="phone">
-    <div id="main-wrapper" class="fancy-scrollbar">
-      <div id="main">
-        
-        <div id="nav">
-          <button type="button">
-            <i class="fa-solid fa-house" style="color: #E54787;"></i>
-          </button>
-          <!-- <button type="button">
-            <i class="fa-solid fa-user"></i>
-          </button> -->
-          <button type="button">
-            <i class="fa-solid fa-badge-percent"></i>
-          </button>
-          <button type="button">
-            <i class="fa-solid fa-comment-dots"></i>
-          </button>
-          <button type="button">
-            <i class="fa-solid fa-cart-circle-check"></i>
-          </button>
-        </div>
+      #phone {
+      background-color: #ffffff;
+      box-shadow: rgb(17, 16, 16) 0px 8px 24px;
+      height: 100%;
+      width: 393px;  
+      margin: 0;
+      }
 
-        <div id="content">
-          <div id="header">
-            <div id="search"  style="margin-left: 10px;">
-              <div id="search-input">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text"  placeholder="Search" />
-                <button type="button">
-                  <i class="fa-solid fa-camera"></i>
-                </button>
-                
-              </div>
-              <!-- <i class="fa-solid fa-bell" style="float: right;"></i> -->
-              <!-- <i class="fa-regular fa-user" style="float: right; margin-left: 20px;"></i> -->
-            </div>
-          </div>
-        </div>
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+      }
 
-        <div id="header-background-image">
-          <img src="Rectangle 58 (1).png" alt="" />
-        </div>
+      #phone .main{
+        padding-top: 3px;
+        width: 393px;
+        height: 100%;
+      }
+      #phone .bg-pink{
+        background-color: #E54787;
+        position: fixed;
+        z-index: 2;
+        width: 393px;
+        height: 60px;
+        top: 0;
+      }
+      .form-control{
+        border: none;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
 
-        
+      .iconify{
+        margin-top: 10px;
+        margin-left: 4px;
+        margin-right: 4px;
+        color: #ffffff;
+        width: 30px;
+        height: 30px;
+      }
 
+      .card{
+        top: 0;
+        margin-top: 65px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .card-body{
+        margin-top: 7px;
+        background-color: #ABC9D6;
+        border-radius: 5px;
+      }
+
+      .card-isi{
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
       
-      <div id="body">
-        <div class="box">
-          <div class="box-isi">
-            <p>Good Morning,</p>
-            <p>Fairuz !</p>
-          </div>
-          <div class="box-kecil">
-            <div id="box-kecil-image">
-              <img src="image 46 (2).png"/>
-            </div>
-            <p><b>Mie Gacoan, Manyar</b></p>
-            <p style="font-size: x-small;"> Diantar dalam 50 min - 4 km></p>
-          </div>
-          <div class="box-kecil">
-            <div id="box-kecil-image">
-              <img src="image 46 (2).png"/>
-            </div>
-            <p><b>Mie Gacoan, Manyar</b></p>
-            <p style="font-size: x-small;"> Diantar dalam 50 min - 4 km></p>
-          </div>
-          <div class="box-kecil">
-            <div id="box-kecil-image">
-              <img src="image 46 (2).png"/>
-            </div>
-            <p><b>Mie Gacoan, Manyar</b></p>
-            <p style="font-size: x-small;"> Diantar dalam 50 min - 4 km></p>
-          </div>
-          <div class="box-kecil">
-            <div id="box-kecil-image">
-              <img src="image 46 (2).png"/>
-            </div>
-            <p><b>Mie Gacoan, Manyar</b></p>
-            <p style="font-size: x-small;"> Diantar dalam 50 min - 4 km></p>
-          </div>
-          
-      </div>
+      .card-body-isi{
+        display: flexbox;
+        padding:  5px;
+        background-color: #ABC9D6;
+        border-radius: 5px;
+      }
 
-        <!-- <div id="background-gradient"></div>
-        <div id="body-content">
-          <div id="search-wrapper">
-            <div id="search-categories" class="no-scrollbar">
-              <button type="button">Pharmacy</button>
-              <button type="button">Video</button>
-              <button type="button">In-Store Code</button>
-              <button type="button">Prime</button>
-              <button type="button">Whole Foods</button>
-              <button type="button">Alexa</button>
-            </div>
-            <div id="search">
-              <div id="search-input">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search Amazon" />
-                <button type="button">
-                  <i class="fa-brands fa-instagram"></i>
-                </button>
-                <button type="button">
-                  <i class="fa-regular fa-microphone"></i>
-                </button>
-              </div>
-            </div>          -->
-
-
-
-
-
-
+      .card-body-isi > p{
+        color: black;
+        margin: 0;
+      }
+    
+      footer{
+        height: 60px;
+        width: 393px;
+        background-color: #7A646D;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        bottom: 0;
+        position: fixed;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phone">
+      <div class="main">
+        <div class="bg-pink">
+          <div class="d-flex align-items-center justify-content-center">
+            <input type="text" id="inputPassword5" class="form-control" placeholder="Cari disini">
+            <span class="iconify" data-icon="mdi:bell"></span>
+          <span class="iconify" data-icon="gg:profile" style="margin-right: 7px;"></span>
+          </div> 
         </div>
-        <script src='https://codepen.io/Hyperplexed/pen/xxYJYjM/54407644e24173ad6019b766443bf2a6.js'></script>
-    </body>
-    </html>
+  
+        <!-- Good Morning -->
+            <div class="card" style="margin-right: 4px;">
+              <img class="card-img-top" src="Rectangle 58 (1).png" alt="Card image cap" style="margin-right: 3px;">
+              <div class="card-body">
+                <div class="row">
+                  
+                  <div class="col-6">
+                    <div class="d-flex flex-column align-items-center">
+                      <h4 class="card-title">Good Morning</h4>
+                      <h5 class="card-text">Fairuz !</h5>
+                    </div>
+                  </div>
+                 
+                  <div class="col-6">
+                    <div class="d-flex flex-column align-items-center">
+                      <h5>Point</h5>
+                      <h4>150 Point</h4>
+                    </div>
+                  </div>
+
+              </div>
+          </div>
+          </div>
+        </div>
+        
+      
+      
+        <!-- end -->
+  
+          <!-- Resto -->
+        <div class="row" style="margin-left: 0.5px; margin-right: 1px;">
+          <div class="col-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="card-isi" style="width: 11.3rem;">
+                <div class="card-body-isi">
+                  <a href="antar.html">
+                    <img class="card-img-top" src="image 46 (2).png" alt="Card image cap">
+                  </a>
+                  <p><b>Gacoan Manyar</b></p>
+                  <p style="font-size: small;"> Diantar dalam 50 min - 4 km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="card-isi" style="width: 11.3rem;">
+                <div class="card-body-isi">
+                  <img class="card-img-top" src="image 46 (2).png" alt="Card image cap">
+                  <p><b>Gacoan Manyar</b></p>
+                  <p style="font-size: small;"> Diantar dalam 50 min - 4 km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="card-isi" style="width: 11.3rem;">
+                <div class="card-body-isi">
+                  <img class="card-img-top" src="image 46 (2).png" alt="Card image cap">
+                  <p><b>Gacoan Manyar</b></p>
+                  <p style="font-size: small;"> Diantar dalam 50 min - 4 km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="card-isi" style="width: 11.3rem;">
+                <div class="card-body-isi">
+                  <img class="card-img-top" src="image 46 (2).png" alt="Card image cap" >
+                  <p><b>Gacoan Manyar</b></p>
+                  <p style="font-size: small;"> Diantar dalam 50 min - 4 km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="card-isi" style="width: 11.3rem;">
+                <div class="card-body-isi">
+                  <img class="card-img-top" src="image 46 (2).png" alt="Card image cap">
+                  <p><b>Gacoan Manyar</b></p>
+                  <p style="font-size: small;"> Diantar dalam 50 min - 4 km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="card-isi" style="width: 11.3rem;">
+                <div class="card-body-isi">
+                  <img class="card-img-top" src="image 46 (2).png" alt="Card image cap">
+                  <p><b>Gacoan Manyar</b></p>
+                  <p style="font-size: small;"> Diantar dalam 50 min - 4 km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="card-isi" style="width: 11.3rem;">
+                <div class="card-body-isi">
+                  <img class="card-img-top" src="image 46 (2).png" alt="Card image cap">
+                  <p><b>Gacoan Manyar</b></p>
+                  <p style="font-size: small;"> Diantar dalam 50 min - 4 km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="card-isi" style="width: 11.3rem;">
+                <div class="card-body-isi">
+                  <img class="card-img-top" src="image 46 (2).png" alt="Card image cap">
+                  <p><b>Gacoan Manyar</b></p>
+                  <p style="font-size: small;"> Diantar dalam 50 min - 4 km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+       <!-- resto end -->
+      </div>
+  
+      <!-- footer -->
+      <footer>
+        <div class="d-flex flex-column align-items-center">
+          <span class="iconify" data-icon="ic:round-home" style="width: 30px; margin-top: 3px; color: #E54787;"></span>
+          <p class="text-gray font-10" style="color: #ffffff; margin-bottom: 6px; color: #E54787;">Home</p>
+        </div>
+
+        <div class="d-flex flex-column align-items-center">
+          <span class="iconify" data-icon="mdi:percent-box" style="width: 25px; margin-top: 3px;"></span>
+          <p class="text-gray font-10" style="color: #ffffff; margin-bottom: 6px;">Promo</p>
+        </div>
+
+        <a href="hischat.html">
+        <div class="d-flex flex-column align-items-center">
+          <span class="iconify" data-icon="bi:chat-dots-fill" style="width: 25px; margin-top: 3px;"></span>
+          <p class="text-gray font-10" style="color: #ffffff; margin-bottom: 6px;">Chat</p>
+        </div>
+        </a>
+
+        <a href="riwayat.html">
+        <div class="d-flex flex-column align-items-center">
+            <span class="iconify" data-icon="octicon:checklist-16" style="width: 25px; margin-top: 3px;"></span>
+            <p class="text-gray font-10" style="color: #ffffff; margin-bottom: 6px;">Pesanan</p>
+        </div>
+        </a>
+
+      </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

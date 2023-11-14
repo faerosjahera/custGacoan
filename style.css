@@ -92,6 +92,40 @@ button, a, input {
   overflow: hidden;
 }
 
+.cover-EK5 {
+  align-items: center;
+  background-color: #151527;
+  border-radius: 3.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 32.1rem 6rem 34.43rem 6.5rem;
+  position: relative;
+  width: 100%;
+
+  .image-5-DRu {
+    background-image: url('/api/try-prod-ap-southeast-1-first-cluster/projects/JKH6cRauweHNccUhWGGDLV/files/image/1aa32c5fe11d29f1f6185a3919626975258b79a8');
+    background-position: -0.0966rem 0;
+    background-size: 100.644% 100%;
+    flex-shrink: 0;
+    height: 20.522rem;
+    margin: 0rem 0.5rem 1.078rem 0rem;
+    position: relative;
+    width: 30rem;
+  }
+
+  .logo-1-Z1u {
+    flex-shrink: 0;
+    height: 5.0704rem;
+    margin-left: 0.5rem;
+    object-fit: cover;
+    vertical-align: top;
+    width: 30rem;
+  }
+}
+
 #main-wrapper {
   height: 100%;
   overflow: auto;
@@ -112,6 +146,19 @@ button, a, input {
   background-color: #DCCDCD;
   padding: 0.5rem 1rem;
   border-top: 1px solid rgb(255 255 255 / 10%);
+}
+
+#nav .jam-atas {
+  position: absolute;
+  width: 377px;
+  height: 21px;
+  top: 16px;
+  left: 26px;
+}
+
+#nav .jam-atas-2 {
+  position: relative;
+  height: 21px;
 }
 
 #nav > button {
@@ -221,7 +268,7 @@ button, a, input {
 
 .box-kecil > p {
   color: #000;
-  font-size: small;
+  font-size: x-small;
 }
 
 .box-kecil{
@@ -232,15 +279,18 @@ button, a, input {
   border: 1px solid #ccc; /* Tepi dengan garis tipis */
   padding: 10px; 
   border-radius: 5px; /* Sudut membulatkan */
-  width: 180px; 
+  width: 150px; 
   height: 133px; 
-
+  /* display: flex; */
+  
+}
+.box-kecil img {
+   display: flex;
 }
 
-.box-kecil-image {
-  width: 50px;
-  position: relative;
-}
+.row {
+  display: flex; }
+
 .header-item-image {
   position: relative;  
 }
@@ -501,3 +551,4 @@ button, a, input {
     flex-grow: 1;
   }
 }
+
