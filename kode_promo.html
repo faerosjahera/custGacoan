@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gacoan Delivery</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/7pK1Mty/image-5.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <style>
+
+      #phone {
+      background-color: #ffffff;
+      box-shadow: rgb(17, 16, 16) 0px 8px 24px;
+      height: 100vh;
+      width: 393px;  
+      margin: 0;
+      }
+
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+      }
+
+     #phone.main{
+        width: 393px;
+        height: 100%;
+      }
+      #phone .bg-pink{
+        background-color: #E54787;
+        
+        position: inherit;
+        z-index: 2;
+        width: 393px;
+        height: 40px;
+        top: 0;
+      }
+      .form-control{
+        border: none;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .iconify{
+        margin-top: 6px;
+        margin-left: 4px;
+        margin-right: 4px;
+        color: #ffffff;
+        width: 25px;
+        height: 25px;
+      }
+
+
+      .card{
+        top: 0;
+        margin-top: 65px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .card-body{
+        margin-top: 7px;
+        background-color: #ABC9D6;
+        border-radius: 5px;
+      }
+
+      .card-isi{
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      
+      .card-body-isi{
+        display: flexbox;
+        padding:  5px;
+        background-color: #ABC9D6;
+        border-radius: 5px;
+      }
+
+      .card-body-isi > p{
+        color: black;
+        margin: 0;
+      }
+    
+      .point{
+        width: 370px;
+        height: 70px;
+        border-radius: 7px;
+        margin:0 auto;
+        background-color: #031441;
+        color: #ffffff;
+      }
+
+      .kode{
+        width: 370px;
+        height: 80px;
+        border-radius: 7px;
+        margin:0 auto;
+        background-color: #146C94;
+        color: #ffffff;
+      }
+
+      .masuk{
+        width: 370px;
+        height: 40px;
+        border-radius: 20px;
+        margin:0 auto;
+        background-color: #7EC0D5;
+        color: #000000;
+      }
+
+      .promo_panjang{
+        width: 377px;
+        height: 140px;
+        border-radius: 5px;
+        padding-top: 5px;
+        margin-top: 10px;
+        margin-left: 7px;
+        background-color: #ABC9D6;
+        color: #000000;
+      }
+
+      .form-control{
+        margin-top: -3px;
+        margin-left: 2px;
+        border-bottom: #000000 solid 1px;
+        background-color: #d9d9d9;
+       
+      }
+
+      .popup{
+        width: 393px;
+        height: 100vh;
+        background-color: rgba(126, 192, 213, 0.5);;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all .3s;
+      }
+
+      .popup_content{
+        width: 80%;
+        background-color: #ffffff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+        border-radius: 15px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.25);
+        opacity: 0;
+        transition: all .5s .1s;
+      }
+
+      .popup_img{
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .popup_img img {
+        display: block;
+        width: 220px;
+        margin: 0 auto;
+        border-radius: 5px;
+       
+      }
+
+      .popup_header {
+        text-align: center;
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      .popup_text{
+        margin-left: 20px;
+        padding: 0 20px;
+        line-height: 1.4;
+      }
+
+      .popup_btn{
+        background-color: rgba(126, 192, 213, 0.5);;
+       margin-left: 137px;
+       margin-bottom: 10px;
+      }
+
+      #udangR:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #udangR:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+
+
+      .popup_close:link,
+      .popup_close:visited {
+       position: absolute;
+       top: 5px;
+       right: 20px;
+       text-decoration: none;
+       color: #000000;
+       font-size: 30px;
+       display: inline-block;
+       line-height: 1;
+       transition: all .3s;
+      }
+
+      .popup_close:hover,
+      .popup_close:active {
+       color: #555;
+      }
+
+      footer{
+        height: 60px;
+        width: 393px;
+        background-color: #7A646D;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        bottom: 0;
+        position: fixed;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phone">
+      <div class="main">
+
+        <div class="bg-pink">
+            <div class="d-flex align-items-sm-start">
+              <a href="promo.html">
+                <span class="iconify" data-icon="gg:arrow-left-o" style="color: #000000;"></span>
+                </a>
+              <h5 style="margin-top: 6px; color: #000000;">Kode Promo</h5>
+            </div> 
+          </div>
+  
+          
+        
+       </div>  <!-- main end -->
+        
+      <!-- point -->
+
+      <img src="persenpromo.svg">
+
+      <h5 style="margin-left: 6px; color: #146C94;">Punya Kode Promo ?</h5>
+      <h6 style="margin-left: 6px; font-weight: 350; color: #146C94;">Masukkan kode promonya di sini ya.</h6>
+     
+      <form style="margin: 5px;">
+        <div class="form-group row">
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="ex. 67449" style="color: #146C94; width: 370px;">
+          </div>
+        </div>
+      </form>
+
+      <a href="#udangR">
+        <button type="button" class="btn btn-outline-dark" style="margin-left: 150px; margin-top: 10px; background-color: #146C94; color: #ffffff;">Cari ?</button>
+    </a>
+        <!-- point end -->
+
+        <!-- pop up -->
+        <div class="popup" id="udangR">
+            <div class="popup_content">
+              <div class="popup_header">
+                <h6 style="margin-top: 10px;">Maaf Kode Promo Tidak Ditemukan</h6>
+              </div>
+              <a href="#" class="btn btn-outline-dark btn-sm popup_btn">Oke</a>
+            </div>
+           </div>
+           <!-- end pop up -->
+    
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

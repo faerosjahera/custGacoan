@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gacoan Delivery</title>
+    <title>Gacoan Delivery | Resto Pick Up</title>
     <link rel="shortcut icon" href="https://i.ibb.co/7pK1Mty/image-5.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -34,7 +34,7 @@
       #phone .bg-pink{
         background-color: #E54787;
         
-        position: fixed;
+        position:inherit;
         z-index: 2;
         width: 393px;
         height: 210px;
@@ -51,13 +51,13 @@
       }
       
       .card{
-        margin-top: 200px;
+    
         top: 0;
         width: 393px;
         background-color: #F7DCE7;
         height: 90px;
         border-radius: 0;
-        position: fixed;
+        position: inherit;
       }
 
       .card-menu{
@@ -65,7 +65,7 @@
         background-color: #ffffff;
         height: 100%;
         top: 0;
-        margin-top: 280px;
+       
         padding-top: 7px;
         padding-bottom: 7px;
         margin-left: -2px;
@@ -87,6 +87,187 @@
       .menu-text{
         padding-left: 10px;
       }
+
+      .popup{
+        width: 393px;
+        height: 100vh;
+        background-color: rgba(229, 71, 135, 0.8);
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all .3s;
+      }
+
+      .popup_content{
+        width: 80%;
+        background-color: #ffffff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+        border-radius: 15px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.25);
+        opacity: 0;
+        transition: all .5s .1s;
+      }
+
+      .popup_img{
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .popup_img img {
+        display: block;
+        width: 220px;
+        margin: 0 auto;
+        border-radius: 5px;
+       
+      }
+
+      .popup_header {
+        text-align: center;
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      .popup_text{
+        margin-left: 20px;
+        padding: 0 20px;
+        line-height: 1.4;
+      }
+
+      .popup_btn{
+        background-color:  rgba(229, 71, 135, 0.8);
+       margin-left: 70px;
+       margin-bottom: 10px;
+      }
+
+      #udangR:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #udangR:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      #miesuit:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #miesuit:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      #udangK:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #udangK:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      #Gac1:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #Gac1:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      #Gac2:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #Gac2:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      #Gac3:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #Gac3:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      #Gac4:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #Gac4:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .popup_close:link,
+      .popup_close:visited {
+       position: absolute;
+       top: 5px;
+       right: 20px;
+       text-decoration: none;
+       color: #000000;
+       font-size: 30px;
+       display: inline-block;
+       line-height: 1;
+       transition: all .3s;
+      }
+
+      .popup_close:hover,
+      .popup_close:active {
+       color: #555;
+      }
+      
+      .floating-box {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Mengatur posisi ke sebelah kanan */
+  height: 50px;
+  width: 340px;
+  border-radius: 30px;
+  background-color: #E54787;
+  border: 1px solid #000000;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.floating-content {
+  /* Sesuaikan ukuran dan gaya konten di dalam floating box */
+  width: calc(100% - 20px); /* Menggunakan calc untuk menghitung lebar dengan benar */
+  margin: 3px;
+}
+
+.additional-text {
+  /* Sesuaikan gaya teks di sebelah kanan */
+  text-align: right;
+  margin-top: -4px;
+  font-size: small;
+}
+
+.additional-text > .iconify{
+  margin-bottom: 15px;
+}
+
+
     </style>
   </head>
   <body>
@@ -96,8 +277,8 @@
         
               <div class="bg-pink">
                 <div class="d-flex align-items-center justify-content-center">
-                  <a href="/">
-                  <span class="iconify" data-icon="ep:back" ></span>
+                  <a href="/../..">
+                    <span class="iconify" data-icon="gg:arrow-left-o" style="color: #000000;"></span>
                   </a>
                   <h5 class="card-title" style="color: #030303; margin-top: 6px;">Mie Gacoan, Kenjeran</h5>
                   <span class="iconify" data-icon="ic:outline-search" style="margin-left: 30px;"></span>
@@ -153,8 +334,10 @@
                           </div>
                           <div class="col-5">
                             <div class="d-flex flex-column align-items-lg-center">
-                            <img src="https://i.ibb.co/ZL8LGXt/a847c3a3-0160-49ab-ac0f-4dae5e075bfb-1.png" 
-                                style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                              <a href="#udangR">
+                                <img src="https://i.ibb.co/ZL8LGXt/a847c3a3-0160-49ab-ac0f-4dae5e075bfb-1.png" 
+                                    style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                                  </a>
                             <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
                           </div>
                           </div>
@@ -172,8 +355,10 @@
                           </div>
                           <div class="col-5">
                             <div class="d-flex flex-column align-items-lg-center">
-                            <img src="https://i.ibb.co/j60dvgW/udang-keju.jpg" 
-                                style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                              <a href="#udangK">
+                                <img src="https://i.ibb.co/j60dvgW/udang-keju.jpg" 
+                                    style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                                  </a>
                             <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
                           </div>
                           </div>
@@ -192,9 +377,11 @@
                         </div>
                       <div class="col-5">
                         <div class="d-flex flex-column align-items-lg-center">
+                          <a href="#miesuit">
                         <img src="https://i.ibb.co/xYgZfqC/82247d9f-a190-4427-a4f3-78584d863945-1.png" 
                             style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
-                        <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                          </a>
+                            <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
                       </div>
                       </div>
 
@@ -213,8 +400,10 @@
 
             <div class="col-5">
               <div class="d-flex flex-column align-items-lg-center">
+                <a href="#Gac1">
               <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                   style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                </a>
               <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
             </div>
             </div>
@@ -234,9 +423,11 @@
                     </div>
                   <div class="col-5">
                     <div class="d-flex flex-column align-items-lg-center">
+                      <a href="#Gac2">
                     <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                         style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
-                    <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                      </a>
+                        <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
                   </div>
                   </div>
 
@@ -254,9 +445,11 @@
                     </div>
                   <div class="col-5">
                     <div class="d-flex flex-column align-items-lg-center">
+                      <a href="#Gac3">
                     <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                         style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
-                    <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                      </a>
+                        <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
                   </div>
                   </div>
 
@@ -274,9 +467,11 @@
                     </div>
                   <div class="col-5">
                     <div class="d-flex flex-column align-items-lg-center">
+                      <a href="#Gac4">
                     <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                         style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
-                    <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                      </a>
+                        <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
                   </div>
                   </div>
 
@@ -291,6 +486,147 @@
         </div>
    
            
+            <!-- pop up -->
+            <div class="popup" id="udangR">
+              <div class="popup_content">
+                <div class="popup_img" >
+                <img src="https://i.ibb.co/vvYf8xc/udang-rambutan.png" style="margin-top: 18px;">
+                  <a href="#" class="popup_close">&times;</a>
+                </div>
+                <div class="popup_header">
+                  <h4>Udang Rambutan</h4>
+                </div>
+                <div class="popup_text">
+                  <h6>Isi 3 Pcs</h6>
+                  <h6>Rp9.000</h6>
+                </div>
+                <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+              </div>
+            </div>
+
+            <div class="popup" id="udangK">
+              <div class="popup_content">
+                <div class="popup_img" >
+                <img src=" https://i.ibb.co/k14jTpJ/udang-keju.png" style="margin-top: 18px;">
+                  <a href="#" class="popup_close">&times;</a>
+                </div>
+                <div class="popup_header">
+                  <h4>Udang Keju</h4>
+                </div>
+                <div class="popup_text">
+                  <h6>Isi 3 Pcs</h6>
+                  <h6>Rp9.000</h6>
+                </div>
+                <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+              </div>
+            </div>
+
+            <div class="popup" id="miesuit">
+              <div class="popup_content">
+                <div class="popup_img" >
+                <img src="https://i.ibb.co/XFsCNMR/mie-suit-popup.png" style="margin-top: 18px;">
+                  <a href="#" class="popup_close">&times;</a>
+                </div>
+                <div class="popup_header">
+                  <h4>Mie Suit</h4>
+                </div>
+                <div class="popup_text">
+                  <h6>Gurih Tidak Pedas</h6>
+                  <h6>Rp13.000</h6>
+                </div>
+                <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+              </div>
+            </div>
+
+            <div class="popup" id="Gac1">
+              <div class="popup_content">
+                <div class="popup_img" >
+                <img src="https://i.ibb.co/mzYzkYR/miegacoan.png" style="margin-top: 18px;">
+                  <a href="#" class="popup_close">&times;</a>
+                </div>
+                <div class="popup_header">
+                  <h4>Mie Gacoan Lvl 1</h4>
+                </div>
+                <div class="popup_text">
+                  <h6>Pedas Manis dengan Kecap</h6>
+                  <h6>Rp13.000</h6>
+                </div>
+                <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+              </div>
+            </div>
+
+            <div class="popup" id="Gac2">
+              <div class="popup_content">
+                <div class="popup_img" >
+                <img src="https://i.ibb.co/mzYzkYR/miegacoan.png" style="margin-top: 18px;">
+                  <a href="#" class="popup_close">&times;</a>
+                </div>
+                <div class="popup_header">
+                  <h4>Mie Gacoan Lvl 2</h4>
+                </div>
+                <div class="popup_text">
+                  <h6>Pedas Manis dengan Kecap</h6>
+                  <h6>Rp13.000</h6>
+                </div>
+                <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+              </div>
+            </div>
+
+            <div class="popup" id="Gac3">
+              <div class="popup_content">
+                <div class="popup_img" >
+                <img src="https://i.ibb.co/mzYzkYR/miegacoan.png" style="margin-top: 18px;">
+                  <a href="#" class="popup_close">&times;</a>
+                </div>
+                <div class="popup_header">
+                  <h4>Mie Gacoan Lvl 3</h4>
+                </div>
+                <div class="popup_text">
+                  <h6>Pedas Manis dengan Kecap</h6>
+                  <h6>Rp13.000</h6>
+                </div>
+                <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+              </div>
+            </div>
+
+            <div class="popup" id="Gac4">
+              <div class="popup_content">
+                <div class="popup_img" >
+                <img src="https://i.ibb.co/mzYzkYR/miegacoan.png" style="margin-top: 18px;">
+                  <a href="#" class="popup_close">&times;</a>
+                </div>
+                <div class="popup_header">
+                  <h4>Mie Gacoan Lvl 4</h4>
+                </div>
+                <div class="popup_text">
+                  <h6>Pedas Manis dengan Kecap</h6>
+                  <h6>Rp13.000</h6>
+                </div>
+                <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+              </div>
+            </div>
+
+
+            <!-- Floating Box -->
+            <a href="konfirm_ambil.html" style="text-decoration: none; color: #000000;">
+            <div class="floating-box">
+              <div class="floating-content row">
+                <div class="col">
+                  <h6 style="margin-top: -7px; margin-bottom: -6px;">1 Item</h6>
+                  <span style="font-size: x-small;">Mie Gacoan, Kenjeran</span>
+                </div>
+                <div class="col">
+                  <div class="additional-text">
+                    <p>13.000 <span class="iconify" data-icon="bxs:shopping-bag" style="vertical-align: middle;"></span></p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            </a>
+            <!-- float end -->
+
+            <!-- end -->
 
         
         

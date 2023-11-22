@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Menu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .background-box {
+      width: 220px;
+      height: 220px;
+      background-color: #7EC0D5; /* Warna background box di belakang */
+      margin: 10px;
+      position: absolute;
+    }
+
+    .floating-box {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: #E54787; /* Warna background floating box */
+      position: relative;
+      z-index: 2; /* Menentukan tingkat z-indeks floating box di atas background box */
+    }
+
+    .text-on-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff; /* Warna teks */
+    }
+
+    .content-behind {
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+  <title>Floating Box with Background</title>
 </head>
 <body>
-
-    <h2>Tambah dan Kurangi Menu</h2>
-
-    <form action="/proses-form" method="post">
-        <!-- Nama Menu -->
-        <label for="namaMenu">Nama Menu:</label>
-        <input type="text" id="namaMenu" name="namaMenu" required>
-
-        <!-- Harga Menu -->
-        <label for="hargaMenu">Harga Menu:</label>
-        <input type="number" id="hargaMenu" name="hargaMenu" required>
-
-        <!-- Jumlah Menu -->
-        <label for="jumlahMenu">Jumlah:</label>
-        <input type="number" id="jumlahMenu" name="jumlahMenu" value="1" min="1">
-
-        <!-- Tombol Tambah -->
-        <button type="submit" name="aksi" value="tambah">Tambah Menu</button>
-
-        <!-- Tombol Kurang -->
-        <button type="submit" name="aksi" value="kurang">Kurangi Menu</button>
-    </form>
-
+  <div class="container">
+    <div class="background-box"></div>
+    <div class="floating-box">
+      <div class="text-on-box">Floating Box</div>
+    </div>
+    <div class="content-behind">
+      <p>Konten di Belakang Box</p>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gacoan Delivery | Resto Delivery</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/7pK1Mty/image-5.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <style>
+
+      #phone {
+      background-color: #ffffff;
+      box-shadow: rgb(17, 16, 16) 0px 8px 24px;
+      height: 100%;
+      width: 393px;  
+      margin: 0;
+      }
+
+      body{
+        margin: 0;
+        padding: 0;
+       background-color: #ffffff;
+      }
+
+      #phone .main{
+        width: 393px;
+        height: 100%;
+      }
+
+      #phone .bg-pink{
+        background-color: #146C94;
+        
+        position: inherit;
+       
+        width: 393px;
+        height: 40px;
+        top: 0;
+      }
+
+      .iconify{
+        margin-top: 6px;
+        margin-left: 4px;
+        margin-right: 4px;
+        color: #030303;
+        width: 25px;
+        height: 25px;
+      }
+      
+      .card{
+       
+        width: 393px;
+        background-color: #146C94;
+        height: 180px;
+        border-radius: 0;
+        color: #000000;
+       
+      }
+
+      .card-menu{
+        width: 393px;
+        background-color: #ffffff;
+        height: 100%;
+        top: 0;
+        
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-left: -2px;
+      }
+
+      .button{
+        display: flex;
+        border-radius: 5px;
+      }
+
+      .menu{
+        width: 370px;
+        height: 120px;
+        border-radius: 7px;
+        margin: 10px;
+        background-color: #E196B4;
+      }
+
+      .menu-text{
+        padding-left: 10px;
+      }
+
+      .tambah{
+        width: 370px;
+        height: 67px;
+        border-radius: 7px;
+        margin: 10px;
+        background-color: #7EC0D5;
+      }
+
+      .total{
+        width: 370px;
+        height: 150px;
+        border-radius: 7px;
+        margin: 10px;
+        background-color: #F7DCE7;
+      }
+
+      .bayar{
+        width: 370px;
+        height: 110px;
+        border-radius: 20px;
+        margin: 10px;
+        background-color: #E54787;
+      }
+
+      .bayar-box{
+        width: 320px;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 30px;
+      }
+
+      .popup_text {
+      display: flex;
+      flex-direction: column;
+      }
+
+      .payment_option {
+          margin-bottom: 10px;
+      }
+
+      .payment_option label {
+          display: flex;
+          align-items: center;
+      }
+
+      .payment_option img {
+          margin-right: 10px;
+      }
+
+      .popup_btn {
+          margin-top: 10px;
+      }
+
+
+      .popup{
+        width: 393px;
+        height: 100vh;
+        background-color: rgba(126, 192, 213, 0.5);;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all .3s;
+      }
+
+      .popup_content{
+        width: 80%;
+        background-color: #ffffff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.25);
+        opacity: 0;
+        transition: all .5s .1s;
+      }
+
+      /* .popup_img{
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .popup_img img {
+        display: block;
+        width: 220px;
+        margin: 0 auto;
+        
+       
+      } */
+
+      .popup_header {
+        text-align: start;
+        color: #555;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-left: 7px;
+      }
+
+      .popup_text{
+        margin-left: 7px;
+        padding: 0 20px;
+        line-height: 1.4;
+      }
+
+      .popup_btn{
+      background-color: #031441;
+      margin-left: 42%;
+      margin-bottom: 7px;
+      color: #ffffff;
+      }
+
+      #udangR:target {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #udangR:target .popup_content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      .popup_close:link,
+      .popup_close:visited {
+       position: absolute;
+       top: 5px;
+       right: 20px;
+       text-decoration: none;
+       color: #000000;
+       font-size: 30px;
+       display: inline-block;
+       line-height: 1;
+       transition: all .3s;
+      }
+
+      .popup_close:hover,
+      .popup_close:active {
+       color: #555;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    
+
+    <div id="phone">
+      
+        <div class="main">
+        
+              <div class="bg-pink">
+                <div class="d-flex align-items-center justify-content-center">
+                  <a href="antar.html">
+                    <span class="iconify" data-icon="gg:arrow-left-o" style="color: #000000;"></span>
+                  </a>
+                  <h5 class="card-title" style="color: #030303; margin-top: 6px;">Mie Gacoan, Kenjeran</h5>
+                  <span class="iconify" data-icon="ic:outline-search" style="margin-left: 30px;"></span>
+                  <span class="iconify" data-icon="ri:share-fill"></span>
+                <span class="iconify" data-icon="material-symbols:info"></span>
+                </div>
+                
+              </div>
+            
+            <!-- Antar -->
+                <div class="card" style="margin-right: 4px; color: #ffffff;">
+                  <!-- <img class="card-img-top" src="Rectangle 58 (1).png" alt="Card image cap" style="margin-right: 3px;"> -->
+                  <div class="card-body">
+                    <div class="row">
+                      
+                      <div class="col-2">
+                        <div class="d-flex flex-column align-items-lg-start">
+                          <img src="https://i.ibb.co/HPHKkxq/self.png">
+                        </div>
+                      </div>
+                      
+                      <div class="col-6">
+                        <div class="d-flex flex-column align-items-lg-start">
+                          <h5>Self Pick Up</h5>
+                          <p style="font-size: 15px;">Siap dalam 10 Menit</p>
+                        </div>
+                      </div>
+
+                      <div class="col-3">
+                        <div class="d-flex flex-column align-items-lg-start">
+                          
+                          <button type="button" class="btn btn-outline-light" style="margin-top: 10px; margin-left: 15px; ">Ganti</button>
+                          
+                        </div>
+                      </div>
+
+                  </div>
+
+                  <!-- alamat -->
+                  <div class="row" style="color: #ffffff;">
+                      
+                    <div class="col-7">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <h6 style="color: #000000;">Alamat Pengambilan</h6>
+                        <p style="font-size: 13px; text-align: justify;">Mie Gacoan, Kenjeran </p>
+                      </div>
+                    </div>
+
+                    <div class="col-5">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <a href="#">
+                        <button type="button" class="btn btn-outline-light btn-sm" style="margin-top: 25px; margin-left: 25px; ">Ganti Alamat</button>
+                        </a>
+                      </div>
+                    </div>
+  
+              </div>
+             <!-- alamat end  -->
+           
+              </div>   <!-- card-body end -->
+
+            </div>  <!-- card end -->
+
+            <!-- MEnu -->
+              <div class="card-menu">
+                <div class="menu" style="margin-top: 10px;">
+                  <div class="row">
+                          <div class="col-7">
+                          <div class="d-flex flex-column align-items-lg-start">
+                          <h5 class="menu-text" style="padding-top: 5px;">Udang Rambutan</h5>
+                          <h6 class="menu-text">Isi 3 pcs</h6>
+                          <p class="menu-text" style="color: gray;">9.000</p>
+                          </div>
+                          </div>
+                          <div class="col-5">
+                            <div class="d-flex flex-column align-items-lg-center">
+                              <a href="#udangR">
+                            <img src="https://i.ibb.co/ZL8LGXt/a847c3a3-0160-49ab-ac0f-4dae5e075bfb-1.png" 
+                                style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                              </a>
+                                <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                          </div>
+                          </div>
+                  </div>
+                </div>
+
+                <!-- tambah nggak? -->
+
+                <div class="tambah">
+                  <div class="row">
+                    <div class="col-7">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <h6 class="menu-text" style="padding-top: 10px;">Ada lagi pesanannya?</h6>
+                        <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Masih bisa nambah menu lain, ya</p>
+                        </div>
+                    </div>
+
+                    <div class="col-5">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <a href="ambil.html">
+                          <button type="button" class="btn btn-outline-dark btn-sm rounded-5" style="color: #E54787; margin-top: 19px; margin-left: 30px; ">Tambah ?</button>
+                          </a>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- end -->
+
+                <!-- total -->
+                <div class="total">
+                  <div class="row">
+                    
+                    <div class="col-8">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <h6 class="menu-text" style="padding-top: 10px;">Ringkasan Pembayaran</h6>
+                        <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Harga</p>
+                        <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Ongkir</p>
+                        <h6 class="menu-text" style="padding-top: 10px;">Total Pembayaran</h6>
+                      </div>
+                    </div>
+
+                    <div class="col-4">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <h6 class="menu-text" style="padding-top: 28px;"></h6>
+                        <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Rp13.000</p>
+                        <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Rp5.000</p>
+                        <h6 class="menu-text" style="padding-top: 10px;">Rp18.000</h6>
+                      </div>
+                    </div>
+
+                   
+
+                  </div>
+                </div>
+                
+                <!-- end -->
+
+
+                <!-- bayar -->
+
+                <div class="bayar" >
+                  <div class="row">
+
+                    <div class="col-1" style="margin: 7px;">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <span class="iconify" data-icon="tdesign:money"></span>
+                      </div>
+                    </div>
+
+                    <div class="col-1" style="margin-top: 5px; margin-left: -10px;">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <p class="menu-text" style="color: #000000;">Tunai</p>
+                        <h6 class="menu-text" style="color: #000000; margin-top: -20px;">Rp.18.000</h6>
+                      </div>
+                    </div>
+                   
+                    
+                    <div class="col-8" style="margin-top: 5px; margin-left: 40px;">
+                      <div class="d-flex flex-column align-items-lg-end">
+                        <a href="#udangR">
+                        <span class="iconify" data-icon="solar:menu-dots-circle-bold" style="height: 30; width: 30;"></span>
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div class="col-10" style="margin: 0 auto;">
+                    <div class="d-flex align-items-lg-center">
+                      <a href="tracking.html" style="text-decoration: none; color: #000000;">
+                          <div class="bayar-box" style="text-align: center; margin-right: 10px;">
+                            <h6 style="margin: 10px;">Pesan dan antar sekarang</h6>
+                            <p style="margin-top: -12px; font-weight: 200;">Bakal dapet 20 point</p>
+                          </div>
+                      </a>
+                  </div>
+                </div>
+
+                  
+                    
+                    
+                  </div>
+                </div>
+                <!-- end -->
+        </div>
+    
+        </div>
+        </div>
+   
+        <!-- pop up -->
+        <div class="popup" id="udangR">
+          <div class="popup_content">
+              <div class="popup_header">
+                  <h6>Metode Pembayaran</h6>
+              </div>
+              <div class="popup_text">
+                  <div class="payment_option">
+                      <label>
+                          <input type="radio" name="udangR_quantity" value="3">
+                          <img src="dana.svg" alt="Dana" style="width: 35px; height: 35px;">
+                          <span><b>Dana</b></span>
+                      </label>
+                  </div>
+      
+                  <div class="payment_option">
+                      <label>
+                          <input type="radio" name="udangR_quantity" value="6">
+                          <img src="link aja.svg" alt="Link Aja" style="width: 30px; height: 30px; margin-left: 4px;">
+                          <span><b>Link Aja</b></span>
+                      </label>
+                  </div>
+      
+                  <div class="payment_option">
+                      <label>
+                          <input type="radio" name="udangR_quantity" value="6">
+                          <img src="i saku.svg" alt="i.saku" style="width: 35px; height: 35px;">
+                          <span><b>i.saku</b></span>
+                      </label>
+                  </div>
+      
+                  <div class="payment_option">
+                      <label>
+                          <input type="radio" name="udangR_quantity" value="6">
+                          <span class="iconify" data-icon="tdesign:money"></span>
+                          <span><b>COD</b></span>
+                      </label>
+                  </div>
+                  <!-- Tambahkan opsi lain jika diperlukan -->
+              </div>
+              <div style="margin: 0 auto;">
+                <a href="#" class="btn btn-outline-dark popup_btn">Pilih</a>
+            </div>
+                     
+          </div>
+      </div>
+      
+      
+   
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
