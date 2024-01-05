@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gacoan Delivery | Profile</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/7pK1Mty/image-5.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+      #phone {
+      background-color: #ffffff;
+      box-shadow: rgb(17, 16, 16) 0px 8px 24px;
+      height: 100vh;
+      width: 393px;  
+      margin: 0;
+      
+      }
+
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+      }
+
+      #phone .main{
+        width: 393px;
+        height: 100%;
+        position: absolute;
+      }
+
+      .bg-atas {
+        position: fixed;
+        z-index: 2;
+        width: 393px;
+        height: 40px;
+        background-color: #E54787;
+        top: 0;
+        left: 0; /* Tambahkan left: 0; jika diperlukan */
+    }
+
+
+      .bg-blue{
+        background-color: #7EC0D5;
+        position: fixed;
+        z-index: 0;
+        width: 393px;
+        height: 125px;
+        left: 0px;
+        border-top: 1px solid #A39F9F;
+       
+      }
+
+      .form-control{
+        border: none;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .iconify{
+        margin-top: 6px;
+        margin-left: 4px;
+        margin-right: 4px;
+        color: #000000;
+        width: 25px;
+        height: 25px;
+      }
+
+     
+      .card{
+        margin-top: 39px;
+        top: 0;
+        width: 393px;
+        border-radius: 0;
+        /* margin-left: 5px;
+        margin-right: 5px; */
+      }
+
+      .profile {
+        background-color: #D9D9D9;
+        position: fixed;
+        z-index: 2;
+        width: 393px;
+        height: 100%;
+        left: 0;
+        top: 180px; /* Sesuaikan nilai top sesuai kebutuhan Anda */
+    }
+
+      .menu{
+        width: 370px;
+        height: 120px;
+        border-radius: 7px;
+        margin: 10px;
+        background-color: #7EC0D5;
+      }
+
+      .menu-text{
+        padding-left: 10px;
+      }
+
+      .total{
+        width: 370px;
+        height: 150px;
+        border-radius: 7px;
+        margin: 10px;
+        background-color: #7EC0D5;
+      }
+
+      .mtd_bayar{
+        width: 370px;
+        height: 30px;
+        border-radius: 7px;
+        margin: 10px;
+        background-color: #E54787;
+      }
+
+      .button-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 6px;
+    }
+
+      footer{
+        height: 60px;
+        width: 393px;
+        background-color: #7A646D;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        bottom: 0;
+        position: fixed;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phone"  style="background-image: url('background.svg'); background-size: cover;">
+      <div class="main">
+     
+
+        <!-- bg atas -->
+        <div class="bg-atas">
+          <div class="d-flex align-items-sm-start">
+            <a href="tracking.html">
+              <span class="iconify" data-icon="gg:arrow-left-o" style="color: #000000;"></span>
+              </a>
+            <h5 style="margin-top: 7px; font-style: bold; color: #000000;">Detail Pesanan</h5>
+          </div> 
+        </div>
+        <!-- end -->
+  
+        <!-- Alamat Kirim -->
+            <div class="card">
+             <div class="bg-blue">
+                <div class="message-container row">
+
+                    <div class="col-7">
+                        <div class="d-flex align-items-start">
+                            <span class="iconify" data-icon="basil:location-outline" style="margin-top: 10px;"></span>
+                            <div style=" margin-top: 10px;">
+                                <h5 style="color: #000000;">Alamat Pengiriman</h5>
+                                <h6 style="font-size: small; color: #ffffff;">Fairuz Zahira</h6>
+                                <h6 style="font-size: small; color: #ffffff;">Jl Pacar Keling V/16 Surabaya</h6>
+                               
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <div class="d-flex align-items-start">
+                            <div style="margin-left: -120px; margin-top: 42px;">
+                                <h6 style="font-size: small; color: #ffffff;">+6282142800106</h6>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="col-7" style="margin-left: 32px;">
+                        <div class="d-flex align-items-start">
+                            <div>
+                                <h6 style=" color: #4B4242;">GC103 - Fairuz Zahira</h6>
+                            </div> 
+                        </div>
+                    </div>
+
+                </div>
+             </div>
+            </div>
+      
+        <!-- end -->
+
+        <!-- menu start -->
+        <div class="menu">
+            <div class="row" style="margin-top: 130px;">
+                    <div class="col-7">
+                    <div class="d-flex flex-column align-items-lg-start">
+                    <h5 class="menu-text" style="padding-top: 5px;">Mie Suit</h5>
+                    <h6 class="menu-text">Gurih tidak pedas</h6>
+                    <p class="menu-text" style="color: gray;">13.000</p>
+                    </div>
+                    </div>
+                  <div class="col-5">
+                    <div class="d-flex flex-column align-items-lg-center">
+                      <a href="#miesuit">
+                    <img src="https://i.ibb.co/xYgZfqC/82247d9f-a190-4427-a4f3-78584d863945-1.png" 
+                        style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                      </a>
+                    <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                  </div>
+                  </div>
+
+            </div>
+          </div>
+
+          <div class="menu">
+            <div class="row">
+                    <div class="col-7">
+                    <div class="d-flex flex-column align-items-lg-start">
+                    <h5 class="menu-text" style="padding-top: 5px;">Mie Gacoan Lvl 3</h5>
+                    <h6 class="menu-text">Pedas manis dengan kecap</h6>
+                    <p class="menu-text" style="color: gray;">13.000</p>
+                    </div>
+                    </div>
+                  <div class="col-5">
+                    <div class="d-flex flex-column align-items-lg-center">
+                      <a href="#Gac3">
+                        <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
+                            style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                          </a>
+                    <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                  </div>
+                  </div>
+
+            </div>
+          </div>     
+  
+        <!-- menu end -->
+        
+           <!-- total -->
+           <div class="total">
+            <div class="row">
+              
+              <div class="col-8">
+                <div class="d-flex flex-column align-items-lg-start">
+                  <h6 class="menu-text" style="padding-top: 10px;">Ringkasan Pembayaran</h6>
+                  <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Harga</p>
+                  <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Ongkir</p>
+                  <h6 class="menu-text" style="padding-top: 10px;">Total Pembayaran</h6>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="d-flex flex-column align-items-lg-start">
+                  <h6 class="menu-text" style="padding-top: 28px;"></h6>
+                  <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Rp13.000</p>
+                  <p class="menu-text" style="color: rgb(0, 0, 0); font-size: small;">Rp5.000</p>
+                  <h6 class="menu-text" style="padding-top: 10px;">Rp18.000</h6>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <!-- end -->
+
+          <!-- metode bayar -->
+          <div class="mtd_bayar">
+            <div class="row">
+              
+              <div class="col-9">
+                <div class="d-flex flex-column align-items-lg-start">
+                  <h6 style="padding-left: 10px; padding-top: 4px;">Metode Pembayaran</h6>
+                </div>
+              </div>
+
+
+              <div class="col-2">
+                <div class="d-flex flex-column align-items-lg-start">
+                  <h6 style="padding-top: 4px;">Dana</h6>
+                </div>
+              </div>
+
+          </div>
+          <!-- end metod bayar -->
+
+          <div class="button-container">
+            <a href="review.html">
+            <button type="button" class="btn btn-dark">Done</button>
+          </a>
+          </div>
+
+
+        
+       </div> <!-- main end -->
+    </div> <!-- phone end -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

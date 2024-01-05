@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gacoan Delivery</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/7pK1Mty/image-5.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <style>
+
+      #phone {
+      background-color: #ffffff;
+      box-shadow: rgb(17, 16, 16) 0px 8px 24px;
+      height: 100vh;
+      width: 393px;  
+      margin: 0;
+      }
+
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        display: flex;
+        height: 100vh;
+        margin: 0;
+      }
+
+ 
+
+     #phone.main{
+        width: 393px;
+        height: 100%;
+      }
+      #phone .bg-pink{
+        background-color: #E54787;
+        
+        position: inherit;
+        z-index: 2;
+        width: 393px;
+        height: 40px;
+        top: 0;
+      }
+
+      .iconify{
+        margin-top: 6px;
+        margin-left: 4px;
+        margin-right: 4px;
+        color: #ffffff;
+        width: 25px;
+        height: 25px;
+      }
+
+      /* chat */
+
+            .chat-container {
+            background-color: #fff;
+            background-image: url('../../images/review.svg'); 
+          
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            }
+
+            .chat-box {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            }
+
+            .input-container{
+                border-top:solid 1px black ;
+            }
+
+            .message-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex: 1;
+            margin-right: 5px;
+            margin-left: 5px;
+            width: 280px;
+            }
+
+            .send-button {
+            padding: 10px 20px;
+            border: solid 1px black;
+            border-radius: 4px;
+            color: black;
+            cursor: pointer;
+            margin: 5px;
+            right: 8px;
+            }
+
+            .send-button:hover {
+            background-color: #7EC0D5;
+            }
+
+            .message {
+            margin-bottom: 10px;
+            display: inline-block;
+            max-width: 70%;
+            padding: 8px 12px;
+            border-radius: 15px;
+            clear: both;
+            }
+
+            .user-message {
+            background-color: #E196B4;
+            float: right;
+            }
+
+            .friend-message {
+            background-color: #7EC0D5;
+            float: left;
+            }
+
+            /* ... kode CSS sebelumnya ... */
+
+            .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            }
+
+            .chat-header {
+            padding: 10px;
+            background-color: #4577aa;
+            border-bottom: 1px solid #ccc;
+            height: 40px;
+            }
+
+            .profile {
+            display: flex;
+            align-items: center;
+            margin-top: -8px;
+            }
+
+            .profile img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+           
+            }
+
+            .profile span {
+            font-weight: bold;
+            }
+
+            .chat-box {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            }
+
+            .iconify{
+            margin-top: 6px;
+            margin-left: 4px;
+            margin-right: 4px;
+            color: #ffffff;
+            width: 25px;
+            height: 25px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="phone">
+      <div class="main">
+
+       </div>  <!-- main end -->
+        
+        <!-- partial -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="profile">
+                <a href="hischat.html">
+                    <span class="iconify" data-icon="gg:arrow-left-o" style="color: #000000; margin-right: 5px;"></span>
+                    </a>
+              <img src="profile2.svg" alt="image">
+              <span>GD01680 - Amelia</span>
+            </div>
+          </div>
+      <div class="chat-box" id="chat-box">
+        <div class="message friend-message">Selamat Pagi, Pesanan telah sampai kepada pelanggan! Silahkan memberikan penilaian terkait pelayanan
+            <div class="star-rating">
+                <div class="rating-stars">
+                  
+                    <i class="mdi mdi-star-outline" style="font-size: 20px;"></i>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="text" id="message-input" class="message-input" placeholder="Tanggapi sesuatu...">
+        <button id="send-button" class="send-button">Send</button>
+      </div>
+    </div>
+</div>
+<!-- partial end -->
+
+      </div>  <!-- phone end -->
+    
+      <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+            var chatBox = document.getElementById("chat-box");
+            var messageInput = document.getElementById("message-input");
+            var sendButton = document.getElementById("send-button");
+
+            function sendMessage() {
+                var message = messageInput.value.trim();
+                if (message !== "") {
+                addMessage("user", message);
+                messageInput.value = "";
+                simulateReply();
+                }
+            }
+
+            sendButton.addEventListener("click", sendMessage);
+            messageInput.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                sendMessage();
+                }
+            });
+
+            function simulateReply() {
+                setTimeout(function() {
+                addMessage("friend", "Terima kasih atas penilaian anda. Semoga hari anda menyenangkan :)");
+                }, 1000);
+            }
+
+            function addMessage(sender, messageContent) {
+                var newMessage = document.createElement("div");
+                newMessage.classList.add("message");
+
+                var profile = document.createElement("div");
+                profile.classList.add("profile");
+
+                var profileImg = document.createElement("img");
+                profileImg.src = (sender === "user") ? "profile_user.jpg" : "profile_friend.jpg";
+                profileImg.alt = (sender === "user") ? "User's Profile" : "Friend's Profile";
+
+                var profileName = document.createElement("span");
+                profileName.textContent = (sender === "user") ? "You" : "Friend";
+
+                profile.appendChild(profileImg);
+                profile.appendChild(profileName);
+                newMessage.appendChild(profile);
+
+                if (sender === "user") {
+                newMessage.classList.add("user-message");
+                newMessage.textContent = messageContent;
+                } else if (sender === "friend") {
+                newMessage.classList.add("friend-message");
+                newMessage.textContent = messageContent;
+                }
+
+                chatBox.appendChild(newMessage);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+            });
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

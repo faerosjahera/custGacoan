@@ -267,6 +267,15 @@
   margin-bottom: 15px;
 }
 
+.increment-button {
+      width: 30px;
+      height: 30px;
+      margin-top: 5px;
+      margin-left: 12px;
+      font-size: 16px;
+      display: inline-block; /* Menjadikan tombol bersebelahan */
+      
+    }
 
     </style>
   </head>
@@ -338,7 +347,10 @@
                                 <img src="https://i.ibb.co/ZL8LGXt/a847c3a3-0160-49ab-ac0f-4dae5e075bfb-1.png" 
                                     style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                                   </a>
-                            <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                                  <div>
+                                    <button onclick="addItem('Udang Rambutan', 9.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                                    <button onclick="removeItem('Udang Rambutan', 9.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                                  </div>
                           </div>
                           </div>
                   </div>
@@ -359,7 +371,10 @@
                                 <img src="https://i.ibb.co/j60dvgW/udang-keju.jpg" 
                                     style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                                   </a>
-                            <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                                  <div>
+                                    <button onclick="addItem('Udang Keju', 9.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                                    <button onclick="removeItem('Udang Keju', 9.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                                  </div>
                           </div>
                           </div>
                   </div>
@@ -381,7 +396,10 @@
                         <img src="https://i.ibb.co/xYgZfqC/82247d9f-a190-4427-a4f3-78584d863945-1.png" 
                             style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                           </a>
-                            <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                          <div>
+                            <button onclick="addItem('MieSuit', 13.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                            <button onclick="removeItem('MieSuit', 13.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                          </div>
                       </div>
                       </div>
 
@@ -404,7 +422,10 @@
               <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                   style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                 </a>
-              <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                <div>
+                  <button onclick="addItem('lvl1', 13.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                  <button onclick="removeItem('lvl1', 13.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                </div>
             </div>
             </div>
 
@@ -427,7 +448,10 @@
                     <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                         style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                       </a>
-                        <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                      <div>
+                        <button onclick="addItem('lvl2', 13.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                        <button onclick="removeItem('lvl2', 13.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                      </div>
                   </div>
                   </div>
 
@@ -449,7 +473,10 @@
                     <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                         style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                       </a>
-                        <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                      <div>
+                        <button onclick="addItem('lvl3', 13.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                        <button onclick="removeItem('lvl3', 13.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                      </div>
                   </div>
                   </div>
 
@@ -471,7 +498,10 @@
                     <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                         style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                       </a>
-                        <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                      <div>
+                        <button onclick="addItem('lvl4', 14.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                        <button onclick="removeItem('lvl4', 14.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                      </div>
                   </div>
                   </div>
 
@@ -607,28 +637,75 @@
             </div>
 
 
-            <!-- Floating Box -->
-            <a href="konfirm_ambil.html" style="text-decoration: none; color: #000000;">
+           <!-- Floating Box -->
+           <a href="konfirm_ambil.html" style="text-decoration: none; color: #000000;">
             <div class="floating-box">
               <div class="floating-content row">
                 <div class="col">
-                  <h6 style="margin-top: -7px; margin-bottom: -6px;">1 Item</h6>
-                  <span style="font-size: x-small;">Mie Gacoan, Kenjeran</span>
+                  <div id="totalItems">Total Items: 0</div>
+                  
                 </div>
                 <div class="col">
                   <div class="additional-text">
-                    <p>13.000 <span class="iconify" data-icon="bxs:shopping-bag" style="vertical-align: middle;"></span></p>
+                    <div style="margin-top: 5px;" id="totalPrice">Total Harga: 0</div>
                   </div>
                 </div>
                 
               </div>
             </div>
-            </a>
-            <!-- float end -->
+          </a>
+          
+          <!-- float end -->
 
             <!-- end -->
 
-        
+            <script>
+              let cart = [];
+              let totalItems = 0;
+              let totalPrice = 0;
+          
+              function addItem(itemName, itemPrice) {
+                const existingItem = cart.find(item => item.name === itemName);
+          
+                if (existingItem) {
+                  existingItem.quantity += 1;
+                } else {
+                  const newItem = { name: itemName, price: itemPrice, quantity: 1 };
+                  cart.push(newItem);
+                }
+          
+                updateCart();
+              }
+          
+              function removeItem(itemName, itemPrice) {
+                const existingItem = cart.find(item => item.name === itemName);
+          
+                if (existingItem && existingItem.quantity > 0) {
+                  existingItem.quantity -= 1;
+          
+                  if (existingItem.quantity === 0) {
+                    // Remove the item from the cart if the quantity becomes zero
+                    cart = cart.filter(item => item.name !== itemName);
+                  }
+                }
+          
+                
+                updateCart();
+              }
+          
+              function updateCart() {
+                totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+                totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+          
+                const totalItemsElement = document.getElementById('totalItems');
+                totalItemsElement.textContent = `Total Items: ${totalItems}`;
+          
+                const totalPriceElement = document.getElementById('totalPrice');
+                totalPriceElement.textContent = `Total Price: ${totalPrice.toFixed(3)}`;
+              }
+            </script>
+          
+    
         
 
    

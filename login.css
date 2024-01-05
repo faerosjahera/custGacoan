@@ -1,0 +1,170 @@
+    .main{
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+        height: 851px;
+        width: 393px;  
+        margin: 100px auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .bg-login{
+        position: absolute;
+        top: 40%;
+        left: 75%;
+        transform: translate(-70%, -50%);
+    }
+
+    .header-atas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        flex-direction: row-reverse; 
+    }
+
+    .header-logo-kanan{
+        left: 0;
+        display: inline-flex;
+        font-size: 20px;
+    }
+
+    .fa-solid {
+        color: #fff;
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .header-jam-kiri{
+        color: #fff;
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0px;
+        padding: 10px;
+        align-items: center;
+        font-size: 20px;
+        font-family: 'Franklin Gothic';
+    }
+
+    .logo-user-login{
+        position: absolute;
+        width: 118px;
+        height: 110px;
+        top: 330px;
+        left: 92px;
+        background-color: #d9d9d9;
+        border-radius: 50%;
+        transform: translate(43%, -40%);
+        z-index: 1;
+    }
+
+    .icon-user-login{
+        transform: translate(16%, 20%)
+    }
+
+    .rectangle-persegi{
+        background-color: #f0f0f0;
+        position: absolute;
+        width: 393px;
+        height: 851px;
+        top: 345px;
+        right: 0px;
+        left: 0px;
+        border-radius: 27px;
+    }
+
+    .kata-login{
+        position: absolute;
+        width: 309px;
+        height: 590px;
+        top: 50px;
+        left: 156px;
+        font-size: 37px;
+        font-family: 'Gill Sans';
+        text-shadow:0 1px 2px #000;
+    }
+
+    .kata-selamat-datang{
+        position: absolute;
+        width: 309px;
+        height: 590px;
+        top: 108px;
+        left: 116px;
+        font-size: 23px;
+        font-family: 'Franklin Gothic Medium';
+        text-shadow:0 1px 2px #000;
+    }
+
+    .form-login{
+        position: absolute;
+        width: 414px;
+        height: 590px;
+        top: 167px;
+        left: 20px;
+    }
+
+    .isian-form{
+        position: relative;
+        width: 100%;
+        margin: auto;
+        padding: 2px;
+        margin-top: 7px;
+        font-size: 20px;
+    }
+
+    input[type=email], select, textarea {
+        width: 85%;
+        padding: 10px;
+        display: inline-block;
+        border: none;
+        border-radius: 10px;
+        background: #d9d9d9;
+    }
+
+    input[type=password], select, textarea {
+        width: 85%;
+        padding: 10px;
+        display: inline-block;
+        border: none;
+        border-radius: 10px;
+        background: #d9d9d9;
+    }
+
+    input[type=email]:focus, input[type=password]:focus {
+        background-color: #b4b4b4;
+        outline: none;
+    }
+
+    .lorem-ipsum-lorem {
+        color: #000;
+        transform: translate(18%, 1680%);
+        text-shadow: 0px 1px 2px #00000040;
+    }
+
+    input[type=submit]{
+        background-color: #d9d9d9;
+        color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        float: right;
+        transform: translate(-210%, 40%);
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium';
+    }
+
+    input[type=submit]:hover{
+        background-color: #19A7CE;
+    }
+
+    .btn-primary {
+        height: 50px;
+        transform: translate(173%, 40%);
+        border-radius: 10px;
+    }

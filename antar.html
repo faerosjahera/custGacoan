@@ -80,7 +80,7 @@
         height: 120px;
         border-radius: 7px;
         margin: 10px;
-        background-color: #ABC9D6;
+        background-color: #7EC0D5;
       }
 
       .menu-text{
@@ -145,7 +145,7 @@
 
       .popup_btn{
         background-color: rgba(126, 192, 213, 0.5);;
-       margin-left: 70px;
+      margin-left: 125px;
        margin-bottom: 10px;
       }
 
@@ -270,6 +270,16 @@
   margin-bottom: 15px;
 }
 
+.increment-button {
+      width: 30px;
+      height: 30px;
+      margin-top: 5px;
+      margin-left: 12px;
+      font-size: 16px;
+      display: inline-block; /* Menjadikan tombol bersebelahan */
+      
+    }
+
     </style>
   </head>
   <body>
@@ -328,24 +338,28 @@
 
             <!-- MEnu -->
               <div class="card-menu">
-                <div class="menu" style="margin-top: 10px;">
+                <div class="menu">
                   <div class="row">
-                          <div class="col-7">
-                          <div class="d-flex flex-column align-items-lg-start">
-                          <h5 class="menu-text" style="padding-top: 5px;">Udang Rambutan</h5>
-                          <h6 class="menu-text">Isi 3 pcs</h6>
-                          <p class="menu-text" style="color: gray;">9.000</p>
-                          </div>
-                          </div>
-                          <div class="col-5">
-                            <div class="d-flex flex-column align-items-lg-center">
-                              <a href="#udangR">
-                            <img src="https://i.ibb.co/ZL8LGXt/a847c3a3-0160-49ab-ac0f-4dae5e075bfb-1.png" 
-                                style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
-                              </a>
-                                <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
-                          </div>
-                          </div>
+                    <div class="col-7">
+                      <div class="d-flex flex-column align-items-lg-start">
+                        <h5 class="menu-text" style="padding-top: 5px;">Udang Rambutan</h5>
+                        <h6 class="menu-text">Isi 3 pcs</h6>
+                        <p class="menu-text" style="color: gray;">9.000</p>
+                      </div>
+                    </div>
+                    <div class="col-5">
+                      <div class="d-flex flex-column align-items-lg-center">
+                        <a href="#udangR">
+                          <img src="https://i.ibb.co/ZL8LGXt/a847c3a3-0160-49ab-ac0f-4dae5e075bfb-1.png" 
+                               style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
+                        </a>
+                        <div>
+                          <button onclick="addItem('Udang Rambutan', 9.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                          <button onclick="removeItem('Udang Rambutan', 9.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                        </div>
+                        
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -364,7 +378,11 @@
                             <img src="https://i.ibb.co/j60dvgW/udang-keju.jpg" 
                                 style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                               </a>
-                            <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                              <div>
+                                <button onclick="addItem('Udang Keju', 9.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                                <button onclick="removeItem('Udang Keju', 9.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                              </div>
+                              
                           </div>
                           </div>
                   </div>
@@ -386,7 +404,11 @@
                         <img src="https://i.ibb.co/xYgZfqC/82247d9f-a190-4427-a4f3-78584d863945-1.png" 
                             style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                           </a>
-                        <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                          <div>
+                            <button onclick="addItem('MieSuit', 13.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                            <button onclick="removeItem('MieSuit', 13.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                          </div>
+                          
                       </div>
                       </div>
 
@@ -409,7 +431,11 @@
               <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                   style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                 </a>
-              <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                <div>
+                  <button onclick="addItem('lvl1', 13.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                  <button onclick="removeItem('lvl1', 13.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                </div>
+                
             </div>
             </div>
 
@@ -432,7 +458,11 @@
               <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                   style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                 </a>
-                    <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                <div>
+                  <button onclick="addItem('lvl2', 13.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                  <button onclick="removeItem('lvl2', 13.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                </div>
+                
                   </div>
                   </div>
 
@@ -454,7 +484,11 @@
                         <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                             style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                           </a>
-                    <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                          <div>
+                            <button onclick="addItem('lvl3', 13.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                            <button onclick="removeItem('lvl3', 13.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                          </div>
+                          
                   </div>
                   </div>
 
@@ -476,7 +510,11 @@
                         <img src="https://i.ibb.co/sjptJ50/mie-gacoan.webp" 
                             style="width: 75px; height: 75px; margin-top: 4px; margin-left: 10px;">
                           </a>
-                    <input type="number" min="0" value="0" class="form-control border-input" style="width: 50px; height: 30px; margin-top: 5px; margin-left: 12px;">
+                          <div>
+                            <button onclick="addItem('lvl4', 14.000)" class="btn btn-dark btn-sm increment-button">+</button>
+                            <button onclick="removeItem('lvl4', 14.000)" class="btn btn-dark btn-sm increment-button">-</button>
+                          </div>
+                          
                   </div>
                   </div>
 
@@ -504,7 +542,7 @@
               <h6>Isi 3 Pcs</h6>
               <h6>Rp9.000</h6>
             </div>
-            <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+            <a href="#" class="btn btn-outline-dark popup_btn">Okey</a>
           </div>
          </div>
         
@@ -521,7 +559,7 @@
               <h6>Isi 3 Pcs</h6>
               <h6>Rp9.000</h6>
             </div>
-            <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+            <a href="#" class="btn btn-outline-dark popup_btn">Okey</a>
           </div>
          </div>
         
@@ -538,7 +576,7 @@
               <h6>Gurih Tidak Pedas</h6>
               <h6>Rp13.000</h6>
             </div>
-            <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+            <a href="#" class="btn btn-outline-dark popup_btn">Okey</a>
           </div>
          </div>
 
@@ -555,7 +593,7 @@
               <h6>Pedas Manis dengan Kecap</h6>
               <h6>Rp13.000</h6>
             </div>
-            <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+            <a href="#" class="btn btn-outline-dark popup_btn">Okey</a>
           </div>
          </div>
         
@@ -572,7 +610,7 @@
               <h6>Pedas Manis dengan Kecap</h6>
               <h6>Rp13.000</h6>
             </div>
-            <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+            <a href="#" class="btn btn-outline-dark popup_btn">Okey</a>
           </div>
          </div>
 
@@ -589,7 +627,7 @@
               <h6>Pedas Manis dengan Kecap</h6>
               <h6>Rp13.000</h6>
             </div>
-            <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+            <a href="#" class="btn btn-outline-dark popup_btn">Okey</a>
           </div>
          </div>
 
@@ -606,7 +644,7 @@
               <h6>Pedas Manis dengan Kecap</h6>
               <h6>Rp13.000</h6>
             </div>
-            <a href="#" class="btn btn-outline-dark popup_btn">Tambah ke Pesanan</a>
+            <a href="#" class="btn btn-outline-dark popup_btn">Okey</a>
           </div>
          </div>
 
@@ -615,12 +653,12 @@
                 <div class="floating-box">
                   <div class="floating-content row">
                     <div class="col">
-                      <h6 style="margin-top: -7px; margin-bottom: -6px;">1 Item</h6>
-                      <span style="font-size: x-small;">Mie Gacoan, Kenjeran</span>
+                      <div id="totalItems">Total Items: 0</div>
+                      
                     </div>
                     <div class="col">
                       <div class="additional-text">
-                        <p>13.000 <span class="iconify" data-icon="bxs:shopping-bag" style="vertical-align: middle;"></span></p>
+                        <div style="margin-top: 5px;" id="totalPrice">Total Harga: 0</div>
                       </div>
                     </div>
                     
@@ -629,17 +667,57 @@
               </a>
               
               <!-- float end -->
-              
-              
-              
-              
-              
-
 
         <!-- end -->
 
    
-    
+        <script>
+          let cart = [];
+          let totalItems = 0;
+          let totalPrice = 0;
+      
+          function addItem(itemName, itemPrice) {
+            const existingItem = cart.find(item => item.name === itemName);
+      
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              const newItem = { name: itemName, price: itemPrice, quantity: 1 };
+              cart.push(newItem);
+            }
+      
+            updateCart();
+          }
+      
+          function removeItem(itemName, itemPrice) {
+            const existingItem = cart.find(item => item.name === itemName);
+      
+            if (existingItem && existingItem.quantity > 0) {
+              existingItem.quantity -= 1;
+      
+              if (existingItem.quantity === 0) {
+                // Remove the item from the cart if the quantity becomes zero
+                cart = cart.filter(item => item.name !== itemName);
+              }
+            }
+      
+            
+            updateCart();
+          }
+      
+          function updateCart() {
+            totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+            totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+      
+            const totalItemsElement = document.getElementById('totalItems');
+            totalItemsElement.textContent = `Total Items: ${totalItems}`;
+      
+            const totalPriceElement = document.getElementById('totalPrice');
+            totalPriceElement.textContent = `Total Price: ${totalPrice.toFixed(3)}`;
+          }
+        </script>
+      
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
